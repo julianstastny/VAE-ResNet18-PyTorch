@@ -6,4 +6,5 @@ Out of the box, it works on 64x64 3-channel input, but can easily be changed to 
 Instead of transposed convolutions, it uses a combination of upsampling and convolutions, as described here:  
 https://distill.pub/2016/deconv-checkerboard/
 
+The implementation of the encoder is inspired by https://github.com/kuangliu/pytorch-cifar
 
