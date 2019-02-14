@@ -153,8 +153,8 @@ class VAE(nn.Module):
         z = self.reparameterize(mean, logvar)
         x = self.decoder(z)
         return x, z
-
-    def reparameterize(self, mean, logvar):
+    @staticmethod
+    def reparameterize(mean, logvar):
         std = torch.exp(logvar / 2) # in log-space, squareroot is divide by two
         epsilon = torch.randn_like(std)
         return epsilon * std + mean
